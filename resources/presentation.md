@@ -13,7 +13,7 @@ class: middle, center
 
 ---
 
-background-image: url(littlegirl.png)
+background-image: url(resources/littlegirl.png)
 
 ---
 
@@ -48,8 +48,7 @@ name: 1
 
 # #{{name}}
 ## I think of the title of my presentations before the content
-### I actually only have 9 mistakes to share
-
+<inline-stats stats=vote-stats></inline-stats>
 ---
 
 ## I think of the title of my presentations before the content
