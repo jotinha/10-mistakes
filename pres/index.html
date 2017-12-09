@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-cookies.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <script src="../app.js"></script>
+    <script src="../core.js"></script>
+
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    
+  </head>
+  <body>
+    <script>
+      var slideshow = remark.create({
+        sourceUrl: 'presentation.md',
+        ratio: '16:9'
+      });
+
+      slideshow.on('showSlide', function(slide) {
+        if (slide && slide.properties && slide.properties.name) {
+          var num = slide.properties.name;
+
+          if (parseInt(num) >= 0) {
+            set_current_question(num);
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
