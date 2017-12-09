@@ -17,7 +17,14 @@
 </head>
 
 <body ng-controller="MyCtrl">
-	<div>{{data.test}}</div>
+
+	<div>
+		<h1>{{data.current_question_id}}: {{question.title}}</h1>
+		<button ng-click="yes()">Yes</button>
+		<button ng-click="na()">Maybe</button>
+		<button ng-click="no()">No</button>
+		<p>{{vote_stats}}</p>
+	</div>
 
     <script type="text/javascript">
     var config = {
