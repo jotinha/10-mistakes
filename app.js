@@ -64,8 +64,9 @@ angular.module('myApp', ["firebase","ngCookies"])
 		return $cookies.get("tencid")
 	}
 
-
-
+	$scope.set_current_question = function(id) {
+		ref.set({current_question_id:id})
+	}
 
 
 })
