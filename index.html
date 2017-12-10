@@ -22,12 +22,12 @@
 
 </head>
 
-<body ng-controller="MyCtrl">
+<body ng-controller="MyCtrl" class="quiz-body">
     <div class="quiz-container">
     	<div>
-    		<h1>{{question.title}}</h1>
+    		<h1>{{is_active ? question.title : "No active question!"}}</h1>
 
-            <div class="stats stats-question">
+            <div class="stats stats-question" ng-show="is_active">
                 <span class="stats-yes stats-button" ng-click="yes()" ng-class="{selected: current_vote == 'yes'}">
                     <span class="stats-value">{{vote_stats.yes || 0}}</span>
                     <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>

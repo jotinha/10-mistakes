@@ -8,13 +8,20 @@ angular.module('myApp', ["firebase","ngCookies"])
 	var ref = firebase.database().ref()
 	
 	$scope.data = $firebaseObject(ref)
-
+	$scope.is_active = false
+	
 	$scope.data.$watch(function() {
 		$scope.question = $scope.data.questions[$scope.data.current_question_id]
-		if ($scope.question && $scope.question.votes) {
-			$scope.vote_stats  = aggregate_votes($scope.question && $scope.question.votes)
+		
+		if ($scope.question == undefined) {
+			$scope.is_active = false
+		
+		} else if ($scope.question.votes) {
+			$scope.is_active = true
+			$scope.vote_stats  = aggregate_votes(scope.question.votes)
 			$scope.current_vote = $scope.question.votes[$scope.cookie_id]	
 		} else {
+			$scope.is_active = true
 			$scope.vote_stats  = aggregate_votes({})
 			$scope.current_vote  = null
 		}

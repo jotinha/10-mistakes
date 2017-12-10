@@ -50,8 +50,12 @@
             if (title != undefined) {
               write_question(num,title)
             }
+          } else {
+            set_current_question(-1);
           }
 
+        } else {
+          set_current_question(-1);
         }
       })
 
