@@ -48,14 +48,3 @@ angular.module('myApp', ["firebase","ngCookies"])
 	$scope.cookie_id = get_cookie_id()
 
 })
-
-.directive("inlineStats", function() {
-	return {
-		templateUrl: "inline-stats.html",
-		restrict: 'E',
-		scope: {
-			stats: "=stats"
-		}
-	}
-})
-
