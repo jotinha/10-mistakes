@@ -18,7 +18,7 @@ angular.module('myApp', ["firebase","ngCookies"])
 		
 		} else if ($scope.question.votes) {
 			$scope.is_active = true
-			$scope.vote_stats  = aggregate_votes(scope.question.votes)
+			$scope.vote_stats  = aggregate_votes($scope.question.votes)
 			$scope.current_vote = $scope.question.votes[$scope.cookie_id]	
 		} else {
 			$scope.is_active = true
