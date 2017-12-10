@@ -7,10 +7,23 @@ class: middle, center
 # #{{name}}
 ## {{title}}
 
-<div class="stats-{{name}} stats-title">
-    <span class="stats-yes"></span> Yes
-    <span class="stats-na"></span> Maybe
-    <span class="stats-no"></span> No
+<div class="stats stats-{{name}} stats-title">
+    <p>
+    <span class="stats-yes"> 
+    	<span class="stats-value">0</span>
+    	<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+    </span> 
+    | 
+    <span class="stats-na">
+    	<span class="stats-value">0</span>
+    	<i class="fa fa-question" aria-hidden="true"></i>
+    </span>
+    |
+    <span class="stats-no">
+    	<span class="stats-value">0</span>
+    	<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+    </span>
+    </p>
 </div>
 
 ---
@@ -19,10 +32,23 @@ layout: true
 name: detail
 ## {{title}}
 
-<div class="stats-{{name}} stats-detail">
-    <span class="stats-yes"></span> Yes
-    <span class="stats-na"></span> Maybe
-    <span class="stats-no"></span> No
+<div class="stats stats-{{name}} stats-detail">
+    <p>
+    <span class="stats-yes"> 
+    	<span class="stats-value">0</span>
+    	<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+    </span> 
+    | 
+    <span class="stats-na">
+    	<span class="stats-value">0</span>
+    	<i class="fa fa-question" aria-hidden="true"></i>
+    </span>
+    |
+    <span class="stats-no">
+    	<span class="stats-value">0</span>
+    	<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+    </span>
+    </p>
 </div>
 
 ---
@@ -84,10 +110,13 @@ name: 1
 title: I think of the title of my presentations before the content    
 
 * A corollary: We think of the acronym for our tools/services before we figure out the meaning of the letters
+
 	* PRECOG: **P**ython **Reco**mmendations **g**enerator
 	* COMPAL: **Comp**lementary **A**ctive **L**earning
 	* DATMAN: **Dat**a **mon**itoring
 	* VIPER: **V**isual ...
+
+--
 
 * This is not actually a mistake, this is the best part of the job
 

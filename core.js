@@ -38,9 +38,9 @@ var aggregate_votes = function(votes) {
 var update_stats_view = function(qid, stats) {
 	console.log(qid)
 	console.log(stats)
-	$('.stats-'+qid).find('.stats-yes').text(stats.yes)
-	$('.stats-'+qid).find('.stats-na').text(stats.na)
-	$('.stats-'+qid).find('.stats-no').text(stats.no)
+	// $('.stats-'+qid).find('.stats-yes > .stats-value').text(stats.yes)
+	// $('.stats-'+qid).find('.stats-na  > .stats-value').text(stats.na)
+	// $('.stats-'+qid).find('.stats-no  > .stats-value').text(stats.no)
 }
 
 var auto_update_stats_view = function() {

@@ -1,0 +1,25 @@
+.stats {
+	margin-top: -1.5em;
+	margin-bottom: 2em;
+}
+
+.stats-title {
+	margin-top:-0.5em;
+	font-size: 1.5em;
+}
+
+.stats-yes {
+	color: green;
+}
+
+.stats-na {
+	color: black;
+}
+
+.stats-no {
+	color: red;
+}
+
+#slide-0 > h1 {
+	display: none;
+}
