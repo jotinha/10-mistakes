@@ -34,6 +34,8 @@ angular.module('myApp', ["firebase","ngCookies"])
 			$scope.question.votes = {}
 		}
 		$scope.question.votes[$scope.cookie_id] = vote;
+		$scope.current_vote = vote;
+		$scope.vote_stats[vote] += 1;
 		$scope.data.$save()
 	}
 	$scope.no = function() { return vote('no') }
