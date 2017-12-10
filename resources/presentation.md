@@ -48,7 +48,9 @@ name: 1
 
 # #{{name}}
 ## I think of the title of my presentations before the content
-<inline-stats stats=vote-stats></inline-stats>
+
+<div>{{test}}</div>
+
 ---
 
 ## I think of the title of my presentations before the content

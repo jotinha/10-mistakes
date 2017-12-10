@@ -4,6 +4,7 @@
 angular.module('myApp', ["firebase","ngCookies"])
 
 .controller("MyCtrl", function($scope, $firebaseObject, $cookies) {
+
 	var ref = firebase.database().ref()
 	
 	$scope.data = $firebaseObject(ref)
@@ -24,27 +25,6 @@ angular.module('myApp', ["firebase","ngCookies"])
 	$scope.na = function() { return vote('na') }
 	$scope.yes = function() { return vote('yes') }
 
-	var aggregate_votes = function(votes) {
-		var vote_stats = {
-			yes: 0,
-			no: 0,
-			na: 0,
-		}
-		if (votes !== undefined) {
-
-			for (var k in votes) {
-				if (votes[k] in vote_stats) {
-					vote_stats[votes[k]] += 1
-
-				}
-			}
-
-			vote_stats.score = (vote_stats.yes - vote_stats.no) / votes.length
-		}
-
-		return vote_stats
-	}
-
 	//cookie
 	var get_cookie_id = function() {
 		function guid() {
@@ -64,5 +44,15 @@ angular.module('myApp', ["firebase","ngCookies"])
 		return $cookies.get("tencid")
 	}
 
+})
+
+.directive("inlineStats", function() {
+	return {
+		templateUrl: "inline-stats.html",
+		restrict: 'E',
+		scope: {
+			stats: "=stats"
+		}
+	}
 })
 
