@@ -15,19 +15,34 @@
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
     <script src="core.js"></script>
     <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
 </head>
 
 <body ng-controller="MyCtrl">
+    <div class="quiz-container">
+    	<div>
+    		<h1>{{question.title}}</h1>
 
-	<div>
-		<h1>{{data.current_question_id}}: {{question.title}}</h1>
-		<button ng-click="yes()">Yes</button>
-		<button ng-click="na()">Maybe</button>
-		<button ng-click="no()">No</button>
-        <inline-stats stats=vote_stats></inline-stats>
-	</div>
+            <div class="stats stats-question">
+                <span class="stats-yes stats-button" ng-click="yes()" ng-class="{selected: current_vote == 'yes'}">
+                    <span class="stats-value">{{vote_stats.yes || 0}}</span>
+                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                </span> 
+                <span class="stats-na stats-button" ng-click="na()" ng-class="{selected: current_vote == 'na'}">
+                    <span class="stats-value">{{vote_stats.na || 0}}</span>
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                </span>
+                <span class="stats-no stats-button" ng-click="no()" ng-class="{selected: current_vote == 'no'}">
+                    <span class="stats-value">{{vote_stats.no || 0}}</span>
+                    <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                </span>
+            </div>
+    	</div>
+    </div>
 
 </body>
 

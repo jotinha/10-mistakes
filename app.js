@@ -12,13 +12,14 @@ angular.module('myApp', ["firebase","ngCookies"])
 	$scope.data.$watch(function() {
 		$scope.question = $scope.data.questions[$scope.data.current_question_id]
 		$scope.vote_stats  = aggregate_votes($scope.question && $scope.question.votes)
+		$scope.current_vote = $scope.question.votes[$scope.cookie_id]
 	})
 
 	var vote = function(vote) {
 		if ($scope.question.votes === undefined) {
 			$scope.question.votes = {}
 		}
-		$scope.question.votes[get_cookie_id()] = vote;
+		$scope.question.votes[$scope.cookie_id] = vote;
 		$scope.data.$save()
 	}
 	$scope.no = function() { return vote('no') }
@@ -43,6 +44,8 @@ angular.module('myApp', ["firebase","ngCookies"])
 
 		return $cookies.get("tencid")
 	}
+
+	$scope.cookie_id = get_cookie_id()
 
 })
 

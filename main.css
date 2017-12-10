@@ -8,6 +8,11 @@
 	font-size: 1.5em;
 }
 
+.stats-question {
+	margin-top:0.5em;
+	font-size: 1.5em;
+}
+
 .stats-yes {
 	color: green;
 }
@@ -23,3 +28,34 @@
 #slide-0 > h1 {
 	display: none;
 }
+
+.quiz-container {
+	width: 100%;
+	text-align: center;
+}
+
+.stats-button {
+	border-style: solid;
+	border-color: black;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 0.5em;
+}
+
+.stats-yes.selected {
+	background-color: green;
+	color: white
+}
+
+.stats-na.selected {
+	background-color: gray;
+	color: white
+}
+
+.stats-no.selected {
+	background-color: red;
+	color: white;
+}
+
+
+
