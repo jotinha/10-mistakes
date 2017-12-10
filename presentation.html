@@ -39,12 +39,19 @@
       });
 
       slideshow.on('showSlide', function(slide) {
+        console.log(slide);
+
         if (slide && slide.properties && slide.properties.name) {
           var num = slide.properties.name;
+          var title = slide.properties.title;
 
           if (parseInt(num) >= 0) {
             set_current_question(num);
+            if (title != undefined) {
+              write_question(num,title)
+            }
           }
+
         }
       })
 

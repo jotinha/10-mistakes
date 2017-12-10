@@ -11,8 +11,15 @@ angular.module('myApp', ["firebase","ngCookies"])
 
 	$scope.data.$watch(function() {
 		$scope.question = $scope.data.questions[$scope.data.current_question_id]
-		$scope.vote_stats  = aggregate_votes($scope.question && $scope.question.votes)
-		$scope.current_vote = $scope.question.votes[$scope.cookie_id]
+		if ($scope.question && $scope.question.votes) {
+			$scope.vote_stats  = aggregate_votes($scope.question && $scope.question.votes)
+			$scope.current_vote = $scope.question.votes[$scope.cookie_id]	
+		} else {
+			$scope.vote_stats  = aggregate_votes({})
+			$scope.current_vote  = null
+		}
+		
+		
 	})
 
 	var vote = function(vote) {
