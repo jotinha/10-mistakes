@@ -10,6 +10,11 @@
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
     <script src="app.js"></script>
     <script src="core.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+        crossorigin="anonymous"></script>
+    
 
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -28,7 +33,11 @@
   </head>
   
   <body ng-controller="MyCtrl">
-    <div>stats:{{test}}</div>
+    <div id="stats-0">
+        <span class="stats-yes"></span> Yes
+        <span class="stats-na"></span> Maybe
+        <span class="stats-no"></span> No
+    </div>
     
     <script>
       var slideshow = remark.create({
@@ -46,5 +55,6 @@
         }
       })
     </script>
+
   </body>
 </html>
