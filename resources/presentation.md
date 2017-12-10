@@ -1,3 +1,33 @@
+---
+
+layout: true
+name: title
+class: middle, center
+
+# #{{name}}
+## {{title}}
+
+<div class="stats-{{name}} stats-title">
+    <span class="stats-yes"></span> Yes
+    <span class="stats-na"></span> Maybe
+    <span class="stats-no"></span> No
+</div>
+
+---
+
+layout: true
+name: detail
+## {{title}}
+
+<div class="stats-{{name}} stats-detail">
+    <span class="stats-yes"></span> Yes
+    <span class="stats-na"></span> Maybe
+    <span class="stats-no"></span> No
+</div>
+
+---
+
+layout: false
 class: middle, center
 
 # The top 10 mistakes I did (do?) as a Data Scientist
@@ -37,23 +67,21 @@ These are *my* mistakes and they don't represent the typical DS at Farfetch. The
 
 ---
 
-class: middle, center
-## Is this working?
-### Go to jgsousa.com/10-mistakes to answer
+template: title
+name: 0
+title: Is this working?
 
 ---
 
-class: middle, center
+template: title
 name: 1
-
-# #{{name}}
-## I think of the title of my presentations before the content
-
-<div>{{test}}</div>
+title: I think of the title of my presentations before the content    
 
 ---
 
-## I think of the title of my presentations before the content
+template: detail
+name: 1
+title: I think of the title of my presentations before the content    
 
 * A corollary: We think of the acronym for our tools/services before we figure out the meaning of the letters
 	* PRECOG: **P**ython **Reco**mmendations **g**enerator
@@ -65,15 +93,15 @@ name: 1
 
 ---
 
-class: middle, center
+template: title
 name: 2
-
-# #{{name}}
-## I thought I could do it all
+title: I thought I could do it all
 
 ---
 
-## I thought I could do it all
+template: detail
+name: 2
+title: I thought I could do it all
 
 * Repeat after me
 	* I am not a developer

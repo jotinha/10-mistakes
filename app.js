@@ -3,7 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', ["firebase","ngCookies"])
 
-.controller("MyCtrl", function($scope, $firebaseObject, $cookies, $window) {
+.controller("MyCtrl", function($scope, $firebaseObject, $cookies) {
 
 	var ref = firebase.database().ref()
 	
@@ -42,11 +42,6 @@ angular.module('myApp', ["firebase","ngCookies"])
 		}
 
 		return $cookies.get("tencid")
-	}
-
-	$window.hack_render = function() {
-		console.log("digesting")
-		$scope.$digest();
 	}
 
 })

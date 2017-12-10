@@ -38,19 +38,19 @@ var aggregate_votes = function(votes) {
 var update_stats_view = function(qid, stats) {
 	console.log(qid)
 	console.log(stats)
-	$('#stats-'+qid).find('.stats-yes').text(stats.yes)
-	$('#stats-'+qid).find('.stats-na').text(stats.na)
-	$('#stats-'+qid).find('.stats-no').text(stats.no)
+	$('.stats-'+qid).find('.stats-yes').text(stats.yes)
+	$('.stats-'+qid).find('.stats-na').text(stats.na)
+	$('.stats-'+qid).find('.stats-no').text(stats.no)
 }
 
-var questions_ref = firebase.database().ref("questions")
-
-questions_ref.on('value', function(snapshot) {
-	var questions = snapshot.val();
-	for (var k in questions) {
-		if (questions[k].votes) {
-			var stats = aggregate_votes(questions[k].votes)
-			update_stats_view(k, stats)
+var auto_update_stats_view = function() {
+	firebase.database().ref("questions").on('value', function(snapshot) {
+		var questions = snapshot.val();
+		for (var k in questions) {
+			if (questions[k].votes) {
+				var stats = aggregate_votes(questions[k].votes)
+				update_stats_view(k, stats)
+			}
 		}
-	}
-})
+	})
+}
