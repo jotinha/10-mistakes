@@ -64,6 +64,10 @@ class: middle, center
 * 3 years as a Data Scientist at Farfetch
 * Last year as team lead for Recommendations DS team
 * PhD in computational and statistical physics from U. Aveiro
+* Reach me at [data@jgsousa.com](mailto:data@jgsousa.com), [linkedin.com/in/jgsousa](linkedin.com/in/jgsousa)
+
+<img src="resources/LogoDSVerde.png" width="300px">
+</img>
 
 ---
 
@@ -73,21 +77,19 @@ background-image: url(resources/littlegirl.png)
 
 # Disclaimer
 
-These are *my* mistakes and they don't represent the typical DS at Farfetch. These are things I did, and sometimes still do, despite the best efforts of my managers, team and the organization to teach me otherwise. That I can make this presentation today is a testament that they have been at least partially succesful in helping me improve.
+These are *my* mistakes and they don't represent the typical DS I've worked with. These are things I did, and sometimes still do, despite the best efforts of my managers, team and the organization to teach me otherwise. That I can make this presentation today is a testament that they have been at least partially succesful in helping me improve.
 
 ---
 
 # An interactive experiment
 
-* Go to jgsousa.com/10-mistakes
+* Go to [jgsousa.com/10-mistakes]
 * Answer
-	* 'yes' if you make that mistake or can relate to it
-	* 'no' if think you have that one figured that out
-	* 'maybe' if you're unsure (a sophistaced N/A)
+	* 'thumbs up' if you make that mistake or can relate to it
+	* 'thumbs down' if you think you have that one figured out
+	* '?' if you're unsure
 
-* Answers are annoynmous!
-
-<!-- TODO: Insert quote about data here-->
+* Answers are anonymous!
 
 ---
 
@@ -99,42 +101,455 @@ title: Is this working?
 
 template: title
 name: 1
-title: I think of the title of my presentations before the content    
+title: I thought I could do it all
 
 ---
 
 template: detail
 name: 1
-title: I think of the title of my presentations before the content    
+title: I thought I could do it all
 
-* A corollary: We think of the acronym for our tools/services before we figure out the meaning of the letters
-
-	* PRECOG: **P**ython **Reco**mmendations **g**enerator
-	* COMPAL: **Comp**lementary **A**ctive **L**earning
-	* DATMAN: **Dat**a **mon**itoring
-	* VIPER: **V**isual ...
+How many times do you answer the question _what do you do?_ with _a bit of everything_?
 
 --
 
 name: 1
 
-* This is not actually a mistake, this is the best part of the job
+As a Data Scientist we know just enough of everything to be dangerous (or we think we do)
+
+Jack of all trades, master of some, but time? none.
+
+???
+
+E.g.: you are tasked to build a news recommendation system
+
+* Scrape the top 20 news websites with scrapy? 
+* Import the data into a database? 
+* Build a relational data model?
+* Train a random forest to predict clicks? I can do that (but will use deep learning instead)
+* Create a report, kpis
+* Need to build an http layer? I'll use flask
+* Need to support realtime? Oh, spark streaming
+* Need to update the website? I know javascript
+* I need to scale to multiple machines? I'll build a big data cluster on my laptop
+
+--
+
+name: 1
+
+Repeat after me:
+  
+* I am not a developer
+* I am not a DBA
+* I am not a release engineer
+* I am not a sysadmin
+* I am not a product owner
+
+--
+
+name: 1
+
+So what am I?
+
+--
+
+name: 1
+
+* It Depends
+
+---
+template: detail
+name: 1
+title: I thought I could do it all 
+
+Work with engineers to put your code in production, don't be a black box
+* Important: **do actual production code!**
+
+--
+
+name: 1
+
+Work with release engineers to build CI pipelines deploy to live
+* dont deploy to live manually (`scp -r mymodel root@live:~/totallylegit/`)
+* don't build your own CI pipeline 
+
+--
+
+name: 1
+
+Ask sysadmins to help you setup your jupyter server, setup gpu machines
+* It's a pain to keep doing this when you grow 30x
+
+--
+
+name: 1
+
+Work with data or platform engineers to scale out your solution
+* Your first try (probably) won't be good enough at scale
+* Actually, talk to them before you get started!
+
+--
+
+name: 1
+
+You have special requirements. 
+* Make sure your organization knows **you need help** doing these things
 
 ---
 
 template: title
 name: 2
-title: I thought I could do it all
+title: I didn't help the organization understand Data Science
+
+---
+name: 2
+class: middle, center
+
+```
+Machine (or Deep) Learning is not magic. It's math. And data.
+                                
+                                        - some guy from some conference
+```
 
 ---
 
 template: detail
 name: 2
-title: I thought I could do it all
+title: I didn't help the organization understand Data Science
 
-* Repeat after me
-	* I am not a developer
-	* I am not a release engineer
-	* I am not devops
-	* I am not a product owner
+DS is not difficult, but it is _complex_ and hard to grasp from the outside.
+
+--
+
+name: 2
+
+Don't be the "guy doing *that* thing that no one really understands" (meaning: no one really cares)
+
+--
+
+name: 2
+
+It's on us to teach our organization:
+* What is Data Science
+* How our algorithms work
+* What we can do
+* What are our **limitations**
+* What is our role
+
+---
+
+template: detail
+name: 2
+title: I didn't help the organization understand Data Science
+
+What is our role? 
+* Looking at data 
+* Making predictions
+* Generating hypothesis
+* Applying machine learning
+* Working with clients
+* Communicating results
+* Building reports
+
+
+Different organizations will think different things. 
+
+--
+
+name: 2
+
+* Just make sure you help them figure it out and that it's clear for both parties
+
+---
+
+template: title
+name: 3
+title: I cared more about the technology than the problem
+
+---
+
+template: detail
+name: 3
+title: I cared more about the technology than the problem
+
+Things I did because I wanted to learn:
+
+* A recommender system from scratch
+* Spark
+* Docker
+* Deep Learning
+
+--
+
+name: 3
+
+Learning new technologies is *very* important. 
+
+But all that really matters is solving the problem
+
+* Customer problem
+* Business problem
+
+--
+
+name: 3
+
+(Some would say all that matters is actually _finding_ the problem)
+
+???
+
+Lembrem-se de parar um bocado para pensar. Estou a fazer isto porque quero
+ou porque é útil (agora ou no futuro)?
+
+Temos sempre tempo para aprender. Mas aprendemos mais com dados reais
+
+---
+
+template: title
+name: 4
+title: I wasn't practical enough
+
+---
+
+template: detail
+name: 4
+title: I wasn't practical enough
+
+Do everything you can to put things in front of the customer asap
+
+
+???
+
+Uma coisa boa que as metodologias agile ensinam é a entrega de valor
+Cria esta "pressão" para entregar e iterar o mais rápido possível
+
+--
+
+name: 4
+
+Simple is better than complex
+
+Good enough is better than great if great comes too late
+
+**Get data first**, get better later
+
+--
+
+name: 4
+
+* Negotiate with engineering best way to do that
+* Copy data to production databases by hand if needed be
+* Measure and iterate 
+* Work with them to make production ready code
+* Move on
+* But **don't quit your code!**
+    * Gentlemen and gentlewomen don't ship and forget
+
+--
+
+name: 4
+
+Don't be _too_ practical. You're expected to think outside the box.
+
+---
+
+template: title
+name: 5
+title: I didn't look at the data enough
+
+???
+
+Isto é particularmente embaraçoso mas acontece com facilidade
+
+---
+
+template: detail
+name: 5
+title: I didn't look at the data enough
+
+You start on a project, you do data analysis, data cleaning, feature engineering...
+
+You plug the models in. You iterate, optimize and find the best one.
+
+You ship it, measure online performance
+
+You forget to look at the data again
+
+--
+
+name: 5
+
+* Data changes!
+    * Monitor the data
+    * Retrain often (not automatically!)
+* KPIs are aggregate measures
+    * Always be deep diving
+
+---
+
+template: title
+name: 6
+title: Getting more data wasn't my first priority
+
+---
+
+template: detail
+name: 6
+title: Getting more data wasn't my first priority
+
+I always assumed that the data I was given was all the data I needed. This was wrong.
+
+Getting good data is harder than modeling it.
+
+Let your company know this! Good data is your company's greatest competitive advantage.
+
+--
+
+name: 6
+
+* Look for open data sets
+* Scrape data (rather, ask engineering to do it)
+* Buy data
+* Build tools to get more data
+    * Amazon turk
+    * internal tools
+
+---
+
+name: 6
+
+background-image: url(resources/compal.gif)
+
+---
+
+template: title
+name: 7
+title: I didn't read enough literature
+
+---
+
+template: detail
+name: 7
+title: I didn't read enough literature
+
+It's too easy to get lost in what you know, your tools and your process
+
+???
+
+We just raise hypothesis, try different models, optimize and launch an experiment. Evaluate and tune.
+
+--
+
+name: 7
+
+Don't go to your first choice. Read up on the problem first
+
+Keep up with what's new in the field. It's fun!
+
+* But don't get overwhelmed! You can't possibly keep up with everything.
+
+But don't forget to go back to the basics!
+
+
+---
+
+template: title
+name: 8
+title: I didn't care about reproducibility
+
+---
+
+template: detail
+name: 8
+title: I didn't care about reproducibility
+
+Experimental science can't exist without reproducibility
+
+--
+
+name: 8
+
+Notebooks are awesome! But not enough:
+* aka the famous `doc_final.ipynb`, `doc_final_2.ipynb`, `doc_final_forreals.ipynb` problem
+
+Git for notebooks is something, but not great
+
+--
+
+name: 8
+
+I don't think there is a good solution available. I would love
+
+* Notebook source control
+* With code review support at a cell level
+* **Data is versioned** alongside notebook
+* Auto publish notebook for reading
+* Searchable, taggable notebooks
+
+Maybe Airbnb knowledge repo?
+
+---
+
+template: title
+name: 9
+title: I didn't care enough about privacy
+
+---
+
+template: detail
+name: 9
+title: I didn't care enough about privacy
+
+GDPR fines: 4% of GMV, 20€ million. Whatever is biggest.
+
+--
+
+name: 9
+
+"_I don't actually need full access to the database_", said no data scientist ever
+
+It's just too easy to think data governance is someone else's problem.
+
+--
+
+name: 9
+
+* Talk to your DBAs, setup proper access control
+* Don't pull data you don't need
+* Mask what you can
+* Encrypt everything else
+* Don't carry it around in your laptop!
+
+Let's be responsible, and not make the industry afraid of us!
+
+---
+
+template: title
+name: 10
+title: I think of the title of my presentations before the content    
+
+---
+
+template: detail
+name: 10
+title: I think of the title of my presentations before the content   
+
+A corollary: We think of the acronym for our tools/services before we figure out the meaning of the letters
+
+* PRECOG: **P**ython **Reco**mmendations **G**enerator
+* COMPAL: **Comp**lementary **A**ctive **L**earning
+* DATMAN: **Dat**a **mon**itoring
+* VIPER: **V**isual **I**nformation for **P**roduct **E**xploration and **R**etrieval
+
+--
+
+name: 10
+
+This is not actually a mistake, this is the best part of the job
+
+---
+class: middle, center
+# Thank you!
+
+
 
